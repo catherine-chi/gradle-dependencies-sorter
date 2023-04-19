@@ -24,7 +24,7 @@ internal object Publishing {
         r.maven { a ->
           a.name = "sonatype"
 
-          val releasesRepoUrl = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2"
+          val releasesRepoUrl = "https://artifactory.build.ue1.snooguts.net/artifactory/reddit-maven-prod"
           val snapshotsRepoUrl = "https://s01.oss.sonatype.org/content/repositories/snapshots"
           a.url = project.uri(if (isSnapshot) snapshotsRepoUrl else releasesRepoUrl)
 
